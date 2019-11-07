@@ -1,0 +1,10 @@
+import websocket
+ws = websocket.WebSocket()
+ws.connect("ws://192.168.0.4:180/websocket")
+ws.send("1")
+ws.send("")
+ws.send("")
+ws.send("")
+ws.send("0003")
+result =  ws.recv()
+ws.close()
